@@ -19,7 +19,15 @@ function getRealAd(url) {
             tmp=patt1.exec(data)
             tmp=tmp[tmp.length-1]
             var obj = JSON.parse(tmp);
-            uurl=obj['mediaDefinitions'][0]["videoUrl"];
+            
+            for (var i=0;;i++)
+            {
+                if(obj['mediaDefinitions'][i]["videoUrl"]!="")
+                {
+                    uurl=obj['mediaDefinitions'][i]["videoUrl"];
+                    break;
+                }
+            }
             $http.download({
                 url: uurl,
                 handler: function (resp) {
