@@ -1,2 +1,2 @@
-# pornhub_download_iOS
-Some useful tools :P
+# video_download_iOS
+Some useful tools based on JSBox and Pythonista :P
